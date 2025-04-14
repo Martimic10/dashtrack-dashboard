@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DashTrack</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>DT</h2>
+      <nav>
+        <ul>
+          <li><span>🏠</span></li>
+          <li><span>📊</span></li>
+          <li><span>👤</span></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar">
+        <div>
+          <h1>Welcome back, <span class="highlight">Michael!</span></h1>
+        </div>
+        <div class="topbar-right">
+          <button id="themeToggle">🌓</button>
+          <img src="https://i.pravatar.cc/40" alt="User Avatar" class="avatar" />
+        </div>
+      </header>
+
+      <section class="grid kpi-grid">
+        <div class="kpi-card">
+          <canvas id="primaryChart" width="40" height="40"></canvas>
+          <div class="kpi-text">
+            <p>Primary Account</p>
+            <h3>$40,206.20</h3>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <canvas id="secondaryChart" width="40" height="40"></canvas>
+          <div class="kpi-text">
+            <p>Secondary Account</p>
+            <h3>$6,421.10</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid cards-grid">
+        <div class="card-display blue-card">
+          <p>OLIVIA RHYE</p>
+          <p>1234 1234 1234 1234</p>
+          <small>Spending this month: <strong>$2,840.40</strong></small>
+        </div>
+        <div class="card-display dark-card">
+          <p>USDT CARD</p>
+          <p>1234 1234 1234 1234</p>
+          <small>Spending this month: <strong>$1,260.20</strong></small>
+        </div>
+      </section>
+
+      <section class="grid data-grid">
+        <div class="chart-box">
+          <h2>Activity</h2>
+          <canvas id="userChart"></canvas>
+        </div>
+        <div class="deposit-list">
+          <h2>Recent Deposits</h2>
+          <ul>
+            <li><span>💳</span> Visa - $244.00</li>
+            <li><span>💰</span> Stripe - $166.00</li>
+            <li><span>📩</span> PayPal - $250.00</li>
+            <li><span>🍎</span> Apple Pay - $144.00</li>
+            <li><span>💳</span> Visa - $408.00</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="spending">
+        <h2>Spending This Week</h2>
+        <canvas id="barChart"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
